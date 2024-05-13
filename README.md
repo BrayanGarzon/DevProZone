@@ -5,6 +5,7 @@ A brief description of what this project does and who it's for
 
 ## Estructura del Proyecto
 
+```
 proyecto/
 │
 ├── public/
@@ -22,6 +23,7 @@ proyecto/
 └── src/
 └── components/
 └── MiComponente.js
+```
 
 
 
