@@ -3,23 +3,25 @@
 
 A brief description of what this project does and who it's for
 
+## Estructura del Proyecto
+
 proyecto/
 │
 ├── public/
-│   ├── index.html
-│   ├── css/
-│   │   └── estilo.css
-│   ├── js/
-│   │   └── script.js
-│   └── assets/
-│       ├── img/
-│       │   └── logo.png
-│       └── icons/
-│           └── favicon.ico
+│ ├── index.html
+│ ├── css/
+│ │ └── estilo.css
+│ ├── js/
+│ │ └── script.js
+│ └── assets/
+│ ├── img/
+│ │ └── logo.png
+│ └── icons/
+│ └── favicon.ico
 │
 └── src/
-    └── components/
-        └── MiComponente.js
+└── components/
+└── MiComponente.js
 
 
 
