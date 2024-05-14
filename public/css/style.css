@@ -164,6 +164,7 @@ body{
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px ;
 }
 .barra-lateral .modo-oscuro .info{
     overflow: hidden;
@@ -207,4 +208,44 @@ body{
 }
 .barra-lateral .modo-oscuro .circulo.prendido{
     left: 15px;
+}
+
+
+
+
+
+/*-----> profileAvatar*/
+.barra-lateral .usuario{
+    width: 100%;
+    display: flex;
+}
+.barra-lateral .usuario img{
+    width: 50px;
+    max-width: 50px;
+    border-radius: 10px;
+}
+.barra-lateral .usuario .info-usuario{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-texto);
+    overflow: hidden;
+}
+.barra-lateral .usuario .nombre-email{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+.barra-lateral .usuario .nombre{
+    font-size: 15px;
+    font-weight: 600;
+
+}
+.barra-lateral .usuario .email{
+    font-size: 13px;
+}
+.barra-lateral .usuario ion-icon{
+    font-size: 20px;
 }

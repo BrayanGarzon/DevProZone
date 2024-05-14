@@ -5,10 +5,27 @@ const spans = document.querySelectorAll('span');
 const palanca = document.querySelector('.switch');
 const circulo = document.querySelector('.circulo');
 
+const changeMode = document.querySelector('#spanMode');
+const icon = document.querySelector('#DarkMode');
+
 palanca.addEventListener("click",()=>{
     let body = document.body;
     body.classList.toggle("dark-mode");
     circulo.classList.toggle("prendido");
+
+    //cambio del contenido 
+    if (body.classList.contains('dark-mode')){
+        changeMode.textContent = 'Light Mode';
+    }else{
+        changeMode.textContent = "Dark Mode";
+    }
+
+    //cambiar el icono
+    if(icon.name === "moon"){
+        icon.name = "sunny"
+    }else{
+        icon.name = "moon";
+    }
 });
 
 
