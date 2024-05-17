@@ -18,6 +18,11 @@
 
     --color-switch-base: rgb(201,202,206);
     --color-switch-circulo: rgb(241,241,241);
+
+
+
+    --color-scroll: rgb(192,192,192);
+    --color-scroll-hover: rgb(241,241,241);
 }
 
 
@@ -40,6 +45,10 @@
 
     --color-switch-base: rgb(39,205,64);
     --color-switch-circulo: rgb(255,255,255);
+
+
+    --color-scroll: rgb(68,69,74);
+    --color-scroll-hover: rgb(85,85,85);
 }
 
 *{
@@ -54,16 +63,37 @@ body{
     width: 100%;
     background-color: darkcyan;
 }
+/*----------->Boton menu*/
+.menu{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    right: 15px;
+    top: 15px;
+    z-index: 100;
+}
 
 
-/*BARRA LATERAL*/
+
+
+/*----------->BARRA LATERAL*/
 .barra-lateral{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 250px;
     height: 100%;
     overflow: hidden;
     padding: 20px 15px;
     background-color: var(--color-barra-lateral);
-    transition: width 0.5s ease, background-color 0.3s ease;
+    transition: width 0.5s ease, background-color 0.3s ease, left 0.5s ease;
+    z-index: 50;
 }
 .mini-barra-lateral{
     width: 80px;
@@ -123,6 +153,22 @@ body{
 
 
 /*-----------------> Menu Navegation*/
+.barra-lateral .navegacion{
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.barra-lateral .navegacion::-webkit-scrollbar{
+    width: 5px;
+}
+.barra-lateral .navegacion::-webkit-scrollbar-thumb{
+    background-color: var(--color-scroll);
+    border-radius: 5px;
+}
+.barra-lateral .navegacion::-webkit-scrollbar-thumb:hover{
+    background-color: var(--color-scroll-hover);
+}
+
 .barra-lateral .navegacion li{
     list-style: none;
     display: flex;
@@ -152,7 +198,7 @@ body{
     width: 100%;
     height: 3px;
     background-color: var(--color-linea);
-    margin-bottom: 20px;
+    margin-top: 15px;
 }
 
 
@@ -248,4 +294,58 @@ body{
 }
 .barra-lateral .usuario ion-icon{
     font-size: 20px;
+}
+
+
+
+/*--------------> MAIN*/
+/*---  para agregar el estilo de activo  ---*/
+#inbox{
+    background-color: var(--color-menu-hover);
+    color: var(--color-menu-hover-texto);
+}
+
+main{
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.5s ease;
+}
+main.min-main{
+    margin-left: 80px;
+}
+
+
+
+/*--------------> RESONSIVE*/
+
+@media(max-height: 660px){
+    .barra-lateral .nombre-pagina{
+        margin-bottom: 5px;
+    }
+    .barra-lateral .modo-oscuro{
+        margin-bottom: 5px;
+        
+    }
+}
+
+@media(max-width: 600px){
+    .barra-lateral{
+        position: fixed;
+        left: -250px;
+    }
+    .max-barra-lateral{
+        left: 0;
+    }
+    .menu{
+        display: flex;
+    }
+    .menu ion-icon:nth-child(2){
+        display: none;
+    }
+    main{
+        margin-left: 0;
+    }
+    main.min-main{
+        margin-left: 0;
+    }
 }
